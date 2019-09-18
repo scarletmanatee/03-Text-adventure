@@ -1,0 +1,628 @@
+{
+    "verbs": [
+      {
+        "v": "EXITS",
+        "map": "EXITS"
+      },
+      {
+        "v": "QUIT",
+        "map": "QUIT"
+      },
+      {
+        "v": "Q",
+        "map": "QUIT"
+      },
+      {
+        "v": "GET ME OUT OF HERE!",
+        "map": "QUIT"
+      },
+      {
+        "v": "NORTH",
+        "map": "NORTH"
+      },
+      {
+        "v": "N",
+        "map": "NORTH"
+      },
+      {
+        "v": "SOUTH",
+        "map": "SOUTH"
+      },
+      {
+        "v": "S",
+        "map": "SOUTH"
+      },
+      {
+        "v": "EAST",
+        "map": "EAST"
+      },
+      {
+        "v": "E",
+        "map": "EAST"
+      },
+      {
+        "v": "WEST",
+        "map": "WEST"
+      },
+      {
+        "v": "W",
+        "map": "WEST"
+      },
+      {
+        "v": "NE",
+        "map": "NE"
+      },
+      {
+        "v": "NORTHEAST",
+        "map": "NE"
+      },
+      {
+        "v": "NW",
+        "map": "NW"
+      },
+      {
+        "v": "NORTHWEST",
+        "map": "NW"
+      },
+      {
+        "v": "SE",
+        "map": "SE"
+      },
+      {
+        "v": "SOUTHEAST",
+        "map": "SE"
+      },
+      {
+        "v": "SOUTHWEST",
+        "map": "SW"
+      },
+      {
+        "v": "UP",
+        "map": "UP"
+      },
+      {
+        "v": "U",
+        "map": "UP"
+      },
+      {
+        "v": "DOWN",
+        "map": "DOWN"
+      },
+      {
+        "v": "D",
+        "map": "DOWN"
+      },
+      {
+        "v": "ENTER",
+        "map": "ENTER"
+      },
+      {
+        "v": "OUT",
+        "map": "OUT"
+      },
+      {
+        "v": "EXIT",
+        "map": "EXIT"
+      },
+      {
+        "v": "LEAVE",
+        "map": "LEAVE"
+      },
+      {
+        "v": "LAND",
+        "map": "LAND"
+      },
+      {
+        "v": "#!#!#",
+        "map": "#!#!#"
+      },
+      {
+        "v": "LAUNC",
+        "map": "LAUNC"
+      },
+      {
+        "v": "CROSS",
+        "map": "CROSS"
+      },
+      {
+        "v": "TAKE",
+        "map": "TAKE"
+      },
+      {
+        "v": "GET",
+        "map": "TAKE"
+      }
+    ],
+    "rooms": {
+      "WHOUS": {
+        "name": "West of House",
+        "desc": "There is a small space between the house any anyother house. No one seems to be there right now.",
+        "exits": [
+          {
+            "verb" :"ENTER",
+            "target": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NHOUS",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SHOUS",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "FORE1",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "NoExit",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "NHOUS": {
+        "name": "Behind the House",
+        "desc": "There is a parking lot in the backyard. There are no cars here right now.",
+        "exits": [
+          {
+            "verb": "WEST",
+            "target": "WHOUS",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "EHOUS",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "SHOUS": {
+        "name": "Front of house",
+        "desc": "You are facing the south side of a white house. There seems to be a front door leading inside",
+        "exits": [
+          {
+            "verb": "WEST",
+            "target": "WHOUS",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "EHOUS",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "EHOUS": {
+        "name": "Driveway",
+        "desc": "There is a driveway between the house and the neighbor's. When you face the house, you see a door leading inside.",
+        "exits": [
+          {
+            "verb": "NORTH",
+            "target": "NHOUS",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SHOUS",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "ENTER",
+            "target": "KITCH",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "KITCH": {
+        "name": "Kitchen",
+        "desc": "You enter the kitchen. The sinks are full of dishes, and it smells like too many spices kept in close proximity. This is a door to the west and what looks to be another door leading downstairs.",
+        "exits": [
+          {
+            "verb": "EAST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "LROOM",
+            "condition": ""
+          },
+          {
+            "verb": "EXIT",
+            "target": "EHOUS",
+            "condition": ""
+          },
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "DOWN",
+            "target": "CELLA",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "GROOM": {
+        "name": "Axe Bodyspray Fortnite Gaming Chill Lounge(tm)",
+        "desc": "You enter a small room containing two desks whith",
+        "exits": [
+          {
+            "verb": "WEST",
+            "target": "FHALL",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "LROOM": {
+        "name": "Living Room",
+        "desc": "Your enter a room with a several couches surounding a small TV. on the north side of the room you see a large dining table. There are exits to the south, east, and north.",
+        "exits": [
+          {
+            "verb": "EAST",
+            "target": "KITCH",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "DOWN",
+            "target": "FHALL",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "BATH1": {
+        "name": "Small Bathroom",
+        "desc": "You enter a small bathroom with a too small toilet and a shower.",
+        "exits": [
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SHALL",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "NoExit",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "BATH2": {
+        "name": "Long Bathroom",
+        "desc": "You enter a large bathroom wiht a beautiful toilet and a less than optimally sized shower",
+        "exits": [
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "SHALL",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "LAUND": {
+        "name": "Laundry Room",
+        "desc": "You look inside what is basically a small closet housing a washer and a dryer. There is a shelf above that holds many different kinds of detergent, and empty boxes of fabric sheets.",
+        "exits": [
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NHALL",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SHALL",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "NHALL",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "BROOM1": {
+        "name": "Kaleb's Room",
+        "desc": "This room is mostly just housing a bed. Whoever sleeps here is getting the short end of the stick, there is barely any room for to live.",
+        "exits": [
+          {
+            "verb": "DOWN",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "SHALL",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "BROOM2": {
+        "name": "Nate's Room",
+        "desc": "This room is mostly empty, except a bed, a TV, and two bean bag chairs.",
+        "exits": [
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NHALL",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "NoExit",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "BROOM3": {
+        "name": "Olivia and Kenton's Room",
+        "desc": "You find yourself in a bedroom with a queensized bed. There are boardgames lining the wall, and clothes all over the floor.",
+        "exits": [
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SE",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "NHALL",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "CELLA": {
+        "name": "Cellar",
+        "desc": "You find yourself in a dark, unfinished basement. There are boxes against the far wall.",
+        "exits": [
+          {
+            "verb": "UP",
+            "target": "KITCH",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "SHALL": {
+        "name": "South Hall",
+        "desc": "You are in a hall with doors on all sides, an extended hall to the noth-east, and stairs leading up",
+        "exits": [
+          {
+            "verb": "NE",
+            "target": "NHALL",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "BROOM1",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "BATH1",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "LROOM",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "BATH2",
+            "condition": ""
+          },
+          {
+            "verb": "UP",
+            "target": "BROOM4",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "NHALL": {
+        "name": "North Hall",
+        "desc": "You are in a hallway with doors to your west, north, and east, and a hallway leads further south.",
+        "exits": [
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "LAUND",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "BROOM2",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SHALL",
+            "condition": ""
+          },
+          {
+            "verb": "WEST",
+            "target": "BROOM3",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "FHALL": {
+        "name": "Front Hall",
+        "desc": "You enter the house, and strangely find 3 doors in a row, all leading the same way one after another. there is also another door to your east.",
+        "exits": [
+          {
+            "verb": "UP",
+            "target": "NoExit",
+            "condition": ""
+          },
+          {
+            "verb": "EAST",
+            "target": "GROOM ",
+            "condition": ""
+          },
+          {
+            "verb": "NORTH",
+            "target": "LROOM",
+            "condition": ""
+          },
+          {
+            "verb": "SOUTH",
+            "target": "SHOUS",
+            "condition": ""
+          },
+          {
+            "verb": "EXIT",
+            "target": "SHOUS",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+      },
+      "BROOM4": {
+        "name": "Beck and Andy's Room",
+        "desc": "This room is fairly large and empty, houseing two dressers and a full bed.",
+        "exits": [
+          {
+            "verb": "DOWN",
+            "target": "SHALL",
+            "condition": ""
+          }
+        ],
+        "inventory": []
+    }
+  }
+}

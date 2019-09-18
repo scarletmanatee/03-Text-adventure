@@ -16,7 +16,7 @@ def render(game,current):
 def getInput():
     ''' Asks the user for input and returns a stripped, uppercase version of what they typed '''
 
-    response = input('What would you like to do? ').strip().upper()
+    response = input('Where would you like to go? ').strip().upper()
     return response
 
 
@@ -35,7 +35,7 @@ def main():
     with open('zork.json') as json_file:
         game = json.load(json_file)
 
-    current = 'WHOUS'
+    current = 'SHOUS'
 
     quit = False
 

@@ -1,0 +1,34 @@
+Name: Adhiraj Singh
+Date: September 28, 2019
+Project: Text Adventure
+Peer's repository: https://github.com/scarletmanatee/03-Text-adventure.git
+
+
+
+What is something you learned by reviewing your peer's project? 
+I learnt that you can have more than one verb that leads to the same map allowing for synonyms to be used when someone is playing the game.
+
+What is something you saw in your peer's project that you would like to apply to your own programming projects?
+Have a good story that has many rooms, mine was quite short and I would have liked to have more things to do in my game.
+
+What suggestions would you have for your peer to improve his/her code?
+Maybe you could utilise the inventory system, that would add a new dimension to the game.
+
+What could have been clearer or better commented?
+Although not necessary, maybe some comments in the json file would be useful to better explain each room and where they all lie relatively. 
+ 
+Was there anything in the code that was confusing to you? If so, what?
+Sometimes the NoExit target in the json file would lead to some confusing outputs, but mostly the code was well written and based off the framework provided.
+ 
+
+Does the repository contain an appropriate LICENSE?
+Yes.
+ 
+
+What is something he/she could add to the README.md to make it more descriptive?
+Maybe explain the situation more since the reeder doesn't know what 'my house ' is.
+ 
+
+Pay a compliment to your peer based on the quality of his/her code.
+Your rooms seem really well planned out and connected, makes the game way more interesting.
+
